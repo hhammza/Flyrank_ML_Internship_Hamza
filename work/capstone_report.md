@@ -1,6 +1,6 @@
 # Search visibility opportunities: an honest, human-reviewed ranking study
 
-**Author:** Hamza  
+**Author:** Muhammad Hamza  
 **Lane:** Search visibility / CTR opportunity  
 **Date:** September 2026  
 **Repository:** [Flyrank_ML_Internship_Hamza](https://github.com/hhammza/Flyrank_ML_Internship_Hamza)
