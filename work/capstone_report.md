@@ -7,11 +7,11 @@
 
 ## Abstract
 
-This study asks whether decision-time search signals can help a content team rank pages for near-term review. I used the gated FlyRank warehouse's March 2026 daily performance partition, keeping client and content identifiers for grouping only and excluding future outcomes from the features. A Logistic Regression model used log impressions, log clicks, average position, and CTR, and was compared with the Week-4 transparent rule on the same client-held-out test rows. In the executed run, the model measured ROC-AUC 0.8458 and average precision 0.5224, while the rule's ROC-AUC was 0.5000 and average precision 0.1386; model precision@50 was 0.94. The output is decision support for human review, not proof that an edit causes more traffic or that a page definitely needs refreshing.
+This FlyRank case study asks whether decision-time search signals can help a content team decide which visible pages deserve review first when editorial capacity is limited. I used the gated FlyRank warehouse's March 2026 daily performance partition, keeping client and content identifiers for grouping only and excluding future outcomes from the features. A Logistic Regression model used log impressions, log clicks, average position, and CTR, and was compared with the Week-4 transparent rule on the same client-held-out test rows. In the executed run, the model measured ROC-AUC 0.8458 and average precision 0.5224, while the rule's ROC-AUC was 0.5000 and average precision 0.1386; model precision@50 was 0.94. The output is decision support for human review, not proof that an edit causes more traffic or that a page definitely needs refreshing.
 
 ## 1. Introduction / problem statement
 
-Content teams cannot review every page every day. The useful question is narrower: which pages look worth reviewing first because they have meaningful search visibility but unusually weak click-through?
+FlyRank content teams cannot review every page every day. The useful case-study question is narrower: which pages look worth reviewing first because they have meaningful search visibility but unusually weak click-through?
 
 The unit is a client-content item observed on a reporting date. The output is a ranked queue. A reviewer may inspect the title, snippet, search intent, brand context, and SERP features before choosing an action. A wrong call costs editorial time and may create an unnecessary change, so the queue is deliberately advisory.
 
