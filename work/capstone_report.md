@@ -11,9 +11,11 @@ This FlyRank case study asks whether decision-time search signals can help a con
 
 ## 1. Introduction / problem statement
 
-FlyRank content teams cannot review every page every day. The useful case-study question is narrower: which pages look worth reviewing first because they have meaningful search visibility but unusually weak click-through?
+Search performance creates a practical attention problem before it creates a modeling problem. FlyRank content teams may have many pages and clients but only limited hours for investigation. Looking only at clicks favors pages that already receive traffic; looking only at rankings favors pages that may be visible but irrelevant. The useful case-study question is narrower: which pages are visible enough to matter but receive fewer clicks than their visibility suggests?
 
-The unit is a client-content item observed on a reporting date. The output is a ranked queue. A reviewer may inspect the title, snippet, search intent, brand context, and SERP features before choosing an action. A wrong call costs editorial time and may create an unnecessary change, so the queue is deliberately advisory.
+This is the FlyRank case study. The warehouse provides repeated daily observations of pseudonymized client-content items. Those observations can organize review work, but they do not automatically tell an editor what to change. Low CTR can reflect a weak title or snippet, but it can also reflect brand intent, SERP features, seasonality, or a query for which a click is not the desired outcome.
+
+The solution is deliberately staged: write a transparent rule, train a small interpretable model using decision-time information only, compare both approaches on held-out clients, inspect errors, and turn the result into a ranked queue with reason codes. The queue narrows attention; a human checks context and decides whether to act. The unit is a client-content item observed on a reporting date, and the output is a ranked queue rather than an automatic edit.
 
 ## 2. Data
 
